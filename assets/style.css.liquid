@@ -1,0 +1,11 @@
+body {
+  /*
+  background-image: url("{{ 'puppy.jpg' | asset_url }}");
+  */
+
+  /* this connects my theme to the settings by id */
+  background-color: {{ settings.bg }}
+  ;
+  color: {{ settings.text_color }}
+  ;
+}

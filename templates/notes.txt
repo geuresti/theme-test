@@ -1,0 +1,5 @@
+In Liquid, you can include a hyphen in your tag 
+syntax {{- , -}} , {%- , and -%} to strip whitespace 
+from the left or right side of a rendered tag. Normally, 
+ if it doesn't output text, any line of Liquid in your template
+  will still output an empty line in your rendered HTML.

@@ -1,0 +1,22 @@
+<!--
+EVERY page uses this layout unless I put a 
+{% layout none %} tag at the top
+
+or I can specify an alternate layout {% layout 'theme.alt' %}
+-->
+
+<html>
+  <head>
+    {{ content_for_header }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body>
+    <!-- renders the header.liquid file -->
+    <!-- {% render 'header' %} -->
+    {% section 'header' %}
+
+    {{ content_for_layout }}
+  {{ 'scripts.js' | asset_url | script_tag }}
+
+
+</body></html>

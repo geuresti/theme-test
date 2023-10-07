@@ -1,0 +1,30 @@
+A section is a snippet, but with SETTINGS that can altered in
+the customize theme editor (changing appearance, position, etc.)
+
+Allows users that don't know how to code to customize 
+their theme
+
+{
+        "type": "number",
+        "id": "random_number",
+        "label": "A number",
+        "default": 300
+      },
+      {
+        "type": "range",
+        "id": "random_number",
+        "label": "A range",
+        "default": 700
+      },
+      {
+        "type": "select",
+        "id": "random_select",
+        "label": "A select",
+        "default": 1000
+      },
+      {
+        "type": "text",
+        "id": "random_text",
+        "label": "Some text",
+        "default": "Lorem ipsum kgok pwokpokzxc miqwdk"
+      },

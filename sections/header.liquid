@@ -1,0 +1,64 @@
+<header class="header">
+  <h1>Shop name: {{ shop.name }}</h1>
+  <p>
+    This is my header from header.liquid
+  </p>
+  <ul>
+    {% for link in linklists.main-menu.links -%}
+      <li>{{ link.title | link_to: link.url }}</li>
+    {%- endfor %}
+  </ul>
+
+  {% if settings.show_search %}
+    <form action="/search">
+      <input type="search" name="q" />
+      <button type="submit">Search</button>
+    </form>
+  {% else %}
+    <p>Search is not being rendered due to settings</p>
+  {% endif %}
+
+</header>
+
+
+
+<style>
+    .header {
+        background: {{ section.settings.bg }};
+    }
+</style>
+
+{% stylesheet %} 
+    .header {
+        padding: 20px;
+    }
+{% endstylesheet %}
+
+{%  comment  %} 
+
+This is a comment example
+
+{% endcomment %} 
+
+{% javascript %}
+    console.log("hey from header")
+{% endjavascript %} 
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search form?",
+        "default": true
+      }, {
+        "type": "color",
+        "id": "bg",
+        "label": "Background color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+{% endschema %}
